@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start": "node --require ./node_modules/dotenv/config build/server.js",
     "build": "esbuild --platform=node --format=cjs ./server.ts --outdir=build --bundle",
     "dev": "run-p dev:*",
     "dev:server": "cross-env NODE_ENV=development nodemon --inspect --require ./node_modules/dotenv/config ./build/server.js",
@@ -22,6 +23,7 @@
     "eslint-config-prettier": "^8.5.0",
     "nodemon": "^2.0.19",
     "prettier": "^2.7.1",
+    "prisma": "^4.1.0",
     "supertest": "^6.2.4",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.0.0",
